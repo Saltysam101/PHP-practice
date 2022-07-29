@@ -1,0 +1,9 @@
+form button {
+    background-color: rgb(28, 185, 28);
+    border: none;
+    color: white;
+    width: 90px;
+    height: 30px;
+    font-size: 1.125rem;
+    cursor: pointer;
+}

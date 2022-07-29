@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -25,13 +26,26 @@ function get_name() {
 get_name();
 
 function hello(){
-    echo "hello";
+    echo "hello\n";
     return 25;
 }
 $return_var = hello();
 echo $return_var;
-
 ?>
+
+<form action="greet.php" method="get">
+    <label for="greeting">Please say a greeting</label>
+    <input name="greeting" type="text" required>
+    <button type="submit">Submit</button>
+</form>
+
+<form action="main.php" method="get">
+    <input name="item" type="text">
+    <button type="submit">Submit</button>
+</form>
+<div>
+   Your Item:  <?php echo $_GET["item"] ?>
+</div>
     
 </body>
 </html>
