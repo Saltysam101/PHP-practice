@@ -24,6 +24,13 @@ function get_name() {
 
 get_name();
 
+function hello(){
+    echo "hello";
+    return 25;
+}
+$return_var = hello();
+echo $return_var;
+
 ?>
     
 </body>
