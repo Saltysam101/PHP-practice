@@ -9,7 +9,21 @@
 <body>
 
 <?php 
-echo "<h1>hello there</h1>";
+$name_one = 'Sam';
+$name_two = 'Bob';
+echo "<h1>Hello There $name_two</h1>";
+
+function get_name() {
+    global $name_one, $name_two;
+    if($name_one){
+        echo "<p>This is a message for $name_one </p>";
+    } else {
+        echo "<p>This is a message for $name_two </p>";
+    }
+}
+
+get_name();
+
 ?>
     
 </body>
