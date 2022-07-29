@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    This is your greeting: <?php echo $_GET["greeting"]; ?>
+    This is your greeting: <?php echo $_POST["greeting"]; ?>
 </body>
 </html>

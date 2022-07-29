@@ -33,18 +33,19 @@ $return_var = hello();
 echo $return_var;
 ?>
 
-<form action="greet.php" method="get">
+<form action="greet.php" method="post">
     <label for="greeting">Please say a greeting</label>
     <input name="greeting" type="text" required>
     <button type="submit">Submit</button>
 </form>
 
-<form action="main.php" method="get">
-    <input name="item" type="text">
+<form action="main.php" method="post">
+    <label for="item">Enter an item</label>
+    <input name="item" type="text" required>
     <button type="submit">Submit</button>
 </form>
-<div>
-   Your Item:  <?php echo $_GET["item"] ?>
+<div class="display-item">
+   Your Item:  <?php echo $_POST["item"] = $_POST["item"] ?? " ";?>
 </div>
     
 </body>
