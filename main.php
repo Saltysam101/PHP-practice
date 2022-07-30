@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
 
@@ -39,13 +40,21 @@ echo $return_var;
     <button type="submit">Submit</button>
 </form>
 
-<form action="main.php" method="post">
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
     <label for="item">Enter an item</label>
     <input name="item" type="text" required>
     <button type="submit">Submit</button>
 </form>
 <div class="display-item">
    Your Item:  <?php echo $_POST["item"] = $_POST["item"] ?? " ";?>
+</div>
+
+<form id="list-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+    <input id="list-value" name="list_item" type="text">
+    <button id="list-btn" type="submit">Submit</button>
+</form>
+<div>
+    <ul id="list-container"></ul>
 </div>
     
 </body>
