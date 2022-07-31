@@ -56,6 +56,22 @@ echo $return_var;
 <div>
     <ul id="list-container"></ul>
 </div>
+
+<?php 
+$my_array = [1, 2, 3, 4];
+print_r($my_array);
+echo "<br>";
+
+$nested_array = [1, 2, 3, [4, 5, 6, [7, [8], 9]], 10, 11];
+
+echo implode(",", $nested_array[3][3][1]); //prints 8
+echo "<br>";
+print_r(($nested_array[3][3])); // prints 7, array, 9
+echo "<br>";
+
+
+
+?>
     
 </body>
 </html>
