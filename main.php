@@ -68,8 +68,15 @@ echo implode(",", $nested_array[3][3][1]); //prints 8
 echo "<br>";
 print_r(($nested_array[3][3])); // prints 7, array, 9
 echo "<br>";
+$assoc_array = ["bird" => "cardinal", "sport" => "basketball", "car" => "toyota", "money" => "infinite"];
+$assoc_array_two = ["weather" => "clear", "life" => "good"];
 
-
+echo $assoc_array["bird"]; //prints cardinal
+echo "<br>";
+echo $assoc_array["money"];//prints infinite
+echo "<br>";
+$union = $assoc_array + $assoc_array_two;//combines both arrays
+print_r($union);//prints newly combined array
 
 ?>
     
