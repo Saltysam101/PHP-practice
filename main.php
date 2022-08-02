@@ -37,6 +37,8 @@ echo $return_var;
 <form action="greet.php" method="post">
     <label for="greeting">Please say a greeting</label>
     <input name="greeting" type="text" required>
+    <label for="name">Your name</label>
+    <input type="text" name="name">
     <button type="submit">Submit</button>
 </form>
 
@@ -76,7 +78,9 @@ echo "<br>";
 echo $assoc_array["money"];//prints infinite
 echo "<br>";
 $union = $assoc_array + $assoc_array_two;//combines both arrays
-print_r($union);//prints newly combined array
+echo implode(",",$union);//prints values of newly combined array
+echo "<br>";
+print_r($union);//prints keys and values of array
 
 ?>
     

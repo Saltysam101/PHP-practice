@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    This is your greeting: <?php echo $_POST["greeting"]; ?>
+    <h2>Thank you <?=$_POST["name"];?></h2>
+    <br>
+    <p>This is your greeting: <strong><?= strtoupper($_POST["greeting"]); ?></strong></p>
 </body>
 </html>
