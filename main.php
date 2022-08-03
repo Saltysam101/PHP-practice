@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    $_SESSION['var'] = 'something interesting';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,6 +87,35 @@ $union = $assoc_array + $assoc_array_two;//combines both arrays
 echo implode(",",$union);//prints values of newly combined array
 echo "<br>";
 print_r($union);//prints keys and values of array
+
+
+function canIDrive($age, $liscense){
+    if($age >= 16 && $liscense === TRUE){
+        echo "<h1>Yes</h1>";
+    } else {
+        echo "<h1>No</h1>";
+    }
+}
+canIDrive(16, TRUE);//prints Yes
+echo "<br>";
+canIDrive(15, TRUE);//prints No
+echo "<br>";
+canIDrive(18, FALSE);//prints No
+
+function number($num){
+    return $num > 10 ? "<h2>The number is greater than 10</h2>" : "<h2>The number is less than 10</h2>";
+}
+
+echo number(15);// prints The number is greater than 10
+echo "<br>";
+echo number(5);// prints The number is less than 10
+
+function noNullAllowed($num=null){
+    return $num = $num ?? 1;
+}
+echo noNullAllowed(15);//prints 15
+echo "<br>";
+echo noNullAllowed()//prints 1
 
 ?>
     

@@ -1,3 +1,7 @@
+<?php 
+ session_start();
+ echo $_SESSION['var'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,5 +14,7 @@
     <h2>Thank you <?=$_POST["name"];?></h2>
     <br>
     <p>This is your greeting: <strong><?= strtoupper($_POST["greeting"]); ?></strong></p>
+    <br>
+    
 </body>
 </html>
