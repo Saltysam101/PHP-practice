@@ -115,7 +115,41 @@ function noNullAllowed($num=null){
 }
 echo noNullAllowed(15);//prints 15
 echo "<br>";
-echo noNullAllowed()//prints 1
+echo noNullAllowed();//prints 1
+echo "<br>";
+
+class Pet{
+    public $color;
+    function __construct($color)
+    {
+        $this->color = $color;
+        echo $color;
+    }
+    private $favTypeFood;
+function myPetsName($pet_name)
+{
+    return "My pet's name is " . $pet_name;
+}
+function setFavFoodType($favTypeFood){
+    $this->favTypeFood = $favTypeFood;
+}
+function getFavFoodType(){
+    echo $this->favTypeFood;
+}
+}
+
+$dog = new Pet("white");// prints white
+echo "<br>";
+echo $dog->color;// prints white too
+echo "<br>";
+echo $dog->myPetsName("Jax");//prints My pet's name is Jax
+echo "<br>";
+$dog->setFavFoodType("human food");
+echo $dog->getFavFoodType();//prints human food
+echo "<br>";
+echo $dog->favTypeFood;// prints fatal error becuase var is set to private
+echo "<br>";
+
 
 ?>
     
